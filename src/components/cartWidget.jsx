@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { FaShoppingCart } from "react-icons/fa";   // <-- corregido
+import { FaShoppingCart } from "react-icons/fa";
 import { CartContext } from "../../context/CartContext.jsx";
 import "../assets/css/cartWidget.css";
 
@@ -12,9 +12,7 @@ const CartWidget = () => {
       <Link className="btn-cart-widget" to="/cart">
         <FaShoppingCart className="cart-icon" />
       </Link>
-      {cart.length > 0 && (
-        <span className="counter-badge">{calcItemsQty()}</span>
-      )}
+      <span class="cart-number"> 10 </span>
     </div>
   );
 };
